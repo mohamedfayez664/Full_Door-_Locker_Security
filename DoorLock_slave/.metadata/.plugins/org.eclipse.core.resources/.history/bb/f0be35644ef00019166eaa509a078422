@@ -1,0 +1,73 @@
+#ifndef TIMER_Init_H
+#define TIMER_Init_H
+
+#include "std_types.h"
+#include "std_macros.h"
+#include "std_micro_comp_conf.h"
+
+
+typedef enum
+{
+	NO_CLOCK,F_CPU_CLOCK,F_CPU_8,F_CPU_64,F_CPU_256,F_CPU_1024
+}TIMER_Clock;
+
+typedef struct
+{
+	TIMER_Clock clock;
+}TIMER0_ConfigType, TIMER2_ConfigType, TIMER1_ConfigType;
+
+
+/* timer 0 */
+
+void TIMER0_OVF_init(uint8 init_start, TIMER0_ConfigType *Config_Ptr);
+void TIMER0_CTC_init(uint8 comp_reg ,TIMER0_ConfigType *Config_Ptr);
+
+void TIMER0_OVF_CallBack(void(*a_ptr)(void));
+void TIMER0_CTC_CallBack(void(*a_ptr)(void));
+
+void TIMER0_CTC_Square_Wave_init(uint8 comp_reg ,uint8 clk_slect);
+//FOCnPWM= Fclk/ (N * 256)  //N is prescaler
+//so N= Fclk/(FOCnPWM * 256)
+void TIMER0_Fast_PWM_n_invert_init(uint8 comp_reg ,uint8 clk_slect);
+
+void TIMER0_clear();
+void TIMER0_off(void);
+void TIMER0_on(uint8 clk_slect);
+void TIMER0_deinit();
+
+/*   timer 2     */
+void TIMER2_OVF_init(uint8 init_start, uint8 clk_slect);
+void TIMER2_comp_init(uint8 comp_reg ,uint8 clk_slect);
+
+void TIMER2_OVF_CallBack(void(*a_ptr)(void));
+void TIMER2_CTC_CallBack(void(*a_ptr)(void));
+
+void TIMER2_CTC_Square_Wave_init(uint8 comp_reg ,uint8 clk_slect);
+void TIMER2_Fast_PWM_n_invert_init(uint8 comp_reg ,uint8 clk_slect);
+
+void TIMER2_clear();
+void TIMER2_off();
+void TIMER2_on(uint8 clk_slect);
+void TIMER2_deinit();
+
+/*   timer 1     */
+void TIMER1_OVF_init(uint16 init_start, uint8 clk_slect) ;  //need to modify
+void TIMER1_CTC_A_init(uint16 comp_reg, uint8 clk_slect);
+
+void TIMER1_OVF_CallBack(void(*a_ptr)(void));
+void TIMER1_CTC_A_CallBack(void(*a_ptr)(void));
+
+void TIMER1_CTC_Square_Wave_init(uint16 comp_regA ,uint8 clk_slect);
+void Timer1_Fast_PWM_n_invert_init(uint16 comp_regA, uint16 top,uint8 clk_slect);
+void Timer1_Fast_PWM_n_invert_speed(uint16 comp_regA);
+
+void TIMER1_clear();
+void TIMER1_off();
+void TIMER1_on(uint8 clk_slect);
+void TIMER1_deinit();
+
+////////////////////////////////////////////////////////////////////////
+void WDT_ON(uint8 WDClk);
+void WDT_OFF(uint8 four_cycles);
+
+#endif  //TIMER_Init_H

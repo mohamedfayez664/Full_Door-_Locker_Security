@@ -1,0 +1,6 @@
+#include "lcd.h"
+#include "keypad.h"
+#include "uart.h"
+#include "timer.h"
+
+new_pssowrd();

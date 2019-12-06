@@ -1,0 +1,15 @@
+#include "slave.h"
+
+uint8 letter , letter_action;
+
+int main(void){
+
+	slave_init();
+
+	receive_new_pass ();
+
+	while(1){
+
+
+	}
+}

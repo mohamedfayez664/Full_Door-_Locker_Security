@@ -1,0 +1,11 @@
+#include "actuators.h"
+#include "external_eeprom.h"
+#include "uart.h"
+
+#define N_OF_PASS   5
+#define TRUE_PASS   0X0F
+#define SLAVE_READY 0x03
+#define OPEN_DOOR   0x05
+#define CHANGE_PASS 0x07
+
+

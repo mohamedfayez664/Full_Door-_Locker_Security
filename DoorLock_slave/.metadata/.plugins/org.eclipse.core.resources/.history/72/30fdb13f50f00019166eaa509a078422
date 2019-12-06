@@ -1,0 +1,28 @@
+#include "actuators.h"
+#include "timer.h"
+
+volatile uint8 compare[5]= {1,2,3,4,5};
+uint8 password[5]={0};
+volatile uint8 switch1_press, switch2_press ,g_flag=0 ,count;
+
+void actuators_init()
+{
+	sei();
+
+	TIMER1_CTC_A_CallBack(callBackTimer);
+	TIMER1_CTC_A_init(2000,2);  //clock and register compare
+}
+
+void callBackTimer(void){
+
+}
+//void callBackin1(void){
+//	LCD_clearScreen();
+//	LCD_displayString("enter new Pass :");
+//	LCD_goToRowColumn(2 , 1);
+//	for (count=0 ; count < 5 ; count ++){
+//		compare[count]=KeyPad_getPressedKey();
+//		LCD_displayCharacter(compare[count]+48);
+//		_delay_ms(400);
+//	}
+//}

@@ -1,0 +1,84 @@
+#include "slave.h"
+
+//////static functions prototype
+static void callBackTimer(void);
+
+/////variables
+uint8 ROM_pass[N_OF_PASS]= {0},
+		my_pass [N_OF_PASS]= {0}, counter;
+
+/////Function definitions
+void slave_init(){
+	sei();
+	//DDRD |=0X1C;
+	PORTD&=~0X1C; //Initialization for motor and buzzer
+
+	TIMER1_CTC_A_CallBack(callBackTimer);
+	TIMER1_CTC_A_init    (2000,2);     //clock and register my_pass_str
+
+	UART_ConfigType myUartconf = {off , towStopBit};
+	UART_init(&myUartconf);
+
+	EX_EEPROM_init();   	/* Init EEPROM */
+}
+
+void new_pass (uint8 *str ,uint8 str_lenghth){
+	EX_EEPROM_writeData(ROM_ADD ,ROM_pass ,N_OF_PASS);
+}
+
+uint8 compare_pass(uint8 *new_pass ,uint8 str_lenghth){
+	uint8 count;
+	for(count=0;count<str_lenghth;count++){
+		if(new_pass[count]!=ROM_pass[count])
+			break;
+	}
+	if(count==5){
+		return TRUE_PASS;
+	}
+	else if(count!=5){
+		return FALSE_PASS;
+	}
+}
+
+void receive_new_pass(){
+
+	    uint8 out_compare;
+		//UART_sendByte(SLAVE_READY);
+		//while (UART_recieveByte() != MASTER_SEND);
+		UART_receiveString(ROM_pass, N_OF_PASS);
+		PORTA=ROM_pass[0];  //checking........
+
+		new_pass(ROM_pass, N_OF_PASS);  //to save it
+		PORTA=0xff;  //check
+		//////some code
+		UART_receiveString(my_pass, N_OF_PASS);  //to receive check pass
+		PORTA=ROM_pass[0]; //check
+		out_compare=compare_pass (my_pass, N_OF_PASS);
+
+		UART_sendByte(out_compare);
+
+		if (out_compare==FALSE_PASS )
+			receive_new_pass();
+}
+
+void open_door(){
+
+}
+
+void buzzer_on (void){
+	//run clock wise for 1 m
+}
+/////
+static void callBackTimer(void){
+	////
+}
+//void callBackin1(void){
+//	LCD_clearScreen();
+//	LCD_displayString("enter new Pass :");
+//	LCD_goToRowColumn(2 , 1);
+//	for (count=0 ; count < 5 ; count ++){
+//		compare[count]=KeyPad_getPressedKey();
+//		LCD_displayCharacter(compare[count]+48);
+//		_delay_ms(400);
+//	}
+//}

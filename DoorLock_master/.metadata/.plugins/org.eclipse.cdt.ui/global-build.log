@@ -1,0 +1,1190 @@
+11:59:40 **** Incremental Build of configuration Debug for project d_l_Master ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:18:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../std_micro_comp_conf.h:21,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../std_micro_comp_conf.h:21,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:24:1: warning: "PORTA" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:264:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:25:1: warning: "DDRA" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:254:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:26:1: warning: "PINA" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:244:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:29:1: warning: "PORTB" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:234:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:30:1: warning: "DDRB" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:224:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:31:1: warning: "PINB" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:214:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:34:1: warning: "PORTC" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:204:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:35:1: warning: "DDRC" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:194:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:36:1: warning: "PINC" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:184:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:39:1: warning: "PORTD" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:174:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:40:1: warning: "DDRD" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:164:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:41:1: warning: "PIND" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:154:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:44:1: warning: "MCUCR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:412:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:45:1: warning: "MCUCSR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:403:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:46:1: warning: "GICR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:465:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:47:1: warning: "GIFR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:460:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:48:1: warning: "SREG" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:410,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/common.h:103:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:52:1: warning: "ADMUX" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:93:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:53:1: warning: "ADCSRA" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:83:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:54:1: warning: "ADCH" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:81:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:55:1: warning: "ADCL" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:80:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:56:1: warning: "SFIOR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:378:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:60:1: warning: "TCCR0" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:393:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:61:1: warning: "TCNT0" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:391:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:62:1: warning: "TIMSK" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:450:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:63:1: warning: "TIFR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:440:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:64:1: warning: "OCR0" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:472:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:67:1: warning: "TCCR1A" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:362:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:68:1: warning: "TCCR1B" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:353:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:69:1: warning: "OCR1A" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:342:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:71:1: warning: "TCNT1" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:348:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:72:1: warning: "OCR1B" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:336:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:73:1: warning: "ICR1" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:330:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:76:1: warning: "TCCR2" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:319:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:77:1: warning: "TCNT2" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:317:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:78:1: warning: "ASSR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:309:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:79:1: warning: "OCR2" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:315:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:82:1: warning: "UDR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:135:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:83:1: warning: "UCSRA" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:125:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:84:1: warning: "UCSRB" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:115:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:85:1: warning: "UCSRC" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:289:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:86:1: warning: "UBRRL" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:113:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:87:1: warning: "UBRRH" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:299:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:90:1: warning: "SPCR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:137:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:91:1: warning: "SPSR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:147:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:92:1: warning: "SPDR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:152:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:95:1: warning: "TWBR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:52:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:96:1: warning: "TWCR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:422:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:97:1: warning: "TWSR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:54:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:98:1: warning: "TWDR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:73:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+../std_micro_comp_conf.h:99:1: warning: "TWAR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../main.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:63:1: warning: this is the location of the previous definition
+Finished building: ../main.c
+ 
+Building file: ../master.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"master.d" -MT"master.o" -c -o "master.o" "../master.c"
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:18:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../std_micro_comp_conf.h:21,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../std_micro_comp_conf.h:21,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:24:1: warning: "PORTA" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:264:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:25:1: warning: "DDRA" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:254:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:26:1: warning: "PINA" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:244:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:29:1: warning: "PORTB" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:234:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:30:1: warning: "DDRB" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:224:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:31:1: warning: "PINB" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:214:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:34:1: warning: "PORTC" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:204:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:35:1: warning: "DDRC" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:194:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:36:1: warning: "PINC" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:184:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:39:1: warning: "PORTD" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:174:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:40:1: warning: "DDRD" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:164:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:41:1: warning: "PIND" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:154:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:44:1: warning: "MCUCR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:412:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:45:1: warning: "MCUCSR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:403:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:46:1: warning: "GICR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:465:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:47:1: warning: "GIFR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:460:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:48:1: warning: "SREG" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:410,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/common.h:103:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:52:1: warning: "ADMUX" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:93:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:53:1: warning: "ADCSRA" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:83:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:54:1: warning: "ADCH" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:81:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:55:1: warning: "ADCL" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:80:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:56:1: warning: "SFIOR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:378:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:60:1: warning: "TCCR0" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:393:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:61:1: warning: "TCNT0" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:391:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:62:1: warning: "TIMSK" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:450:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:63:1: warning: "TIFR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:440:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:64:1: warning: "OCR0" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:472:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:67:1: warning: "TCCR1A" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:362:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:68:1: warning: "TCCR1B" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:353:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:69:1: warning: "OCR1A" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:342:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:71:1: warning: "TCNT1" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:348:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:72:1: warning: "OCR1B" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:336:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:73:1: warning: "ICR1" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:330:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:76:1: warning: "TCCR2" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:319:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:77:1: warning: "TCNT2" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:317:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:78:1: warning: "ASSR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:309:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:79:1: warning: "OCR2" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:315:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:82:1: warning: "UDR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:135:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:83:1: warning: "UCSRA" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:125:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:84:1: warning: "UCSRB" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:115:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:85:1: warning: "UCSRC" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:289:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:86:1: warning: "UBRRL" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:113:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:87:1: warning: "UBRRH" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:299:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:90:1: warning: "SPCR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:137:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:91:1: warning: "SPSR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:147:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:92:1: warning: "SPDR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:152:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:95:1: warning: "TWBR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:52:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:96:1: warning: "TWCR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:422:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:97:1: warning: "TWSR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:54:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:98:1: warning: "TWDR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:73:1: warning: this is the location of the previous definition
+In file included from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+../std_micro_comp_conf.h:99:1: warning: "TWAR" redefined
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/io.h:236,
+                 from c:/winavr-20100110/lib/gcc/../../avr/include/avr/interrupt.h:38,
+                 from ../std_micro_comp_conf.h:20,
+                 from ../keypad.h:16,
+                 from ../master.h:1,
+                 from ../master.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/iom16.h:63:1: warning: this is the location of the previous definition
+Finished building: ../master.c
+ 
+Building target: d_l_Master.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,d_l_Master.map -mmcu=atmega16 -o "d_l_Master.elf"  ./delay.o ./keypad.o ./lcd.o ./main.o ./master.o ./timer.o ./uart.o   
+Finished building target: d_l_Master.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S d_l_Master.elf  >"d_l_Master.lss"
+Finished building: d_l_Master.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 d_l_Master.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   10470 bytes (63.9% Full)
+(.text + .data + .bootloader)
+
+Data:        435 bytes (42.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

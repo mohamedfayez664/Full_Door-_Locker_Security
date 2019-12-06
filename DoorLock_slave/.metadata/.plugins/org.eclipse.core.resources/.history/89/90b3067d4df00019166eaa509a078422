@@ -1,0 +1,19 @@
+#ifndef SWITCHES_H
+#define SWITCHES_H
+
+#include "std_types.h"
+#include "std_macros.h"
+#include "std_micro_comp_conf.h"
+
+
+extern volatile uint8 compare[5];
+extern unsigned char password[5];
+extern volatile uint8 switch1_press, switch2_press;
+
+void actuators_init();
+//void reset_watch();
+//void callBackTimer(void);
+void callBackin2 ();
+void callBackin1 ();
+
+#endif

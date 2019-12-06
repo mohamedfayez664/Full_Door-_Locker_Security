@@ -1,0 +1,60 @@
+#include "master.h"
+
+unsigned char count =0,  i=0 ;
+unsigned char letter=0 , my_pass_str[5]={0};
+uint8 letter_action;
+int main(void){
+
+	master_init();
+
+	enter_new_pass();
+
+	while(1){
+
+		LCD_clearScreen();
+		LCD_goToRowColumn(1,2);
+		LCD_displayString(" *: open door ");
+		LCD_goToRowColumn(2,2);
+		LCD_displayString(" +: change pass");
+
+		letter=KeyPad_getPressedKey();
+		UART_sendByte(letter);
+
+		letter_action=UART_recieveByte();
+
+		if (letter_action == OPEN_DOOR){
+			enter_pass();
+			open_door ();
+		}
+		else if(letter_action == CHANGE_PASS){
+			enter_pass();
+			enter_new_pass();
+		}
+
+////////////////////////
+		for (count=0 ; count < 5 ; count ++){
+			letter=KeyPad_getPressedKey();
+			my_pass_str[count]=letter;
+			LCD_displayCharacter('*');
+			_delay_ms(400);
+		}
+		for(i=0;i<5;i++){
+			if(my_pass_str[i]!=my_pass_str[i])
+				break;
+		}
+		if(i==5){
+			LCD_clearScreen();
+			LCD_goToRowColumn(2,1);
+			LCD_displayString("  Welcome  ");
+			_delay_ms(1000);
+		}//i
+
+		else if(i!=5){    //the password not matched
+			LCD_clearScreen();
+			LCD_goToRowColumn(2,1);
+			LCD_displayString(" Amo 7ramy ");
+			_delay_ms(1000);
+
+		}//i!=5
+	}
+}

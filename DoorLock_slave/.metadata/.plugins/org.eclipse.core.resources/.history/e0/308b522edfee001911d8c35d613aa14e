@@ -1,0 +1,32 @@
+#include "switches.h"
+#include "lcd.h"
+#include "interrupt.h"
+#include "keypad.h"
+
+volatile uint8 compare[5]= {1,2,3,4,5};
+uint8 password[5]={0};
+volatile uint8 switch1_press, switch2_press ,g_flag=0 ,count;
+extern int (*ptr_main)(void);
+
+void switch_init()
+{
+	//BIT_IN(PORTB,7);
+	//BIT_IN(PORTB,6);
+	sei();
+
+	INT0_CallBack(callBackin1);
+	INT0_Init(2);     //run in falling edge
+
+}
+
+void callBackin1(void){
+	//LCD_clearScreen();
+	LCD_displayString("enter new Pass :");
+	LCD_goToRowColumn(3 , 1);
+	for (count=0 ; count < 5 ; count ++){
+		compare[count]=KeyPad_getPressedKey();
+		LCD_displayCharacter(compare[count]+48);
+		_delay_ms(400);
+	}
+	 (*ptr_main)();
+}

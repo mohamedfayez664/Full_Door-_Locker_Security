@@ -1,0 +1,7 @@
+1571099533098	Rename resource 'door_look'
+1571256570322	Delete resource 'd_l_Slave/motors.c'
+1571256576095	Delete resource 'd_l_Slave/motors.h'
+1571257339225	Delete resource 'd_l_Slave/interrupt.h'
+1571257347966	Delete resource 'd_l_Slave/interrupt.c'
+1571285721693	Delete resource 'd_l_Slave/actuators.h'
+1571285726655	Delete resource 'd_l_Slave/actuators.c'

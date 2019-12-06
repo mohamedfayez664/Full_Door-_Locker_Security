@@ -1,0 +1,94 @@
+#include "master.h"
+
+//////static functions
+static void callBackTimer(void);
+static void new_pssowrd();
+static void re_enter_new_pssowrd();
+static uint8 check_pass();
+
+/////variables
+uint8 my_pass_str[N_OF_PASS]= {0}  , counter;
+
+///function definitions
+void master_init(){
+	sei();
+	TIMER1_CTC_A_CallBack(callBackTimer);
+	TIMER1_CTC_A_init    (2000,2);     //clock and register my_pass_str
+
+	UART_ConfigType myUartconf = {off , towStopBit};
+	UART_init(&myUartconf);
+
+	LCD_init();
+}
+
+void enter_new_pass(){
+	do{
+		new_pssowrd();
+		re_enter_new_pssowrd();
+	}while(check_pass() != TRUE_PASS);
+}
+
+void enter_pass(){
+	LCD_clearScreen();
+	LCD_displayString("enter your Pass:-");
+	LCD_goToRowColumn(2 , 1);
+	for (counter=0 ; counter < N_OF_PASS ; counter ++){
+		my_pass_str[counter]= KeyPad_getPressedKey();
+		LCD_displayCharacter('*');
+		_delay_ms(250);
+	}
+	////////////////////
+	PORTB=UART_recieveByte(); // != SLAVE_READY);
+	UART_sendString(my_pass_str,N_OF_PASS);
+}
+
+void open_door (){
+	LCD_clearScreen();
+	LCD_goToRowColumn(2 , 1);
+	LCD_displayString("WELCOME_DOOR OPEN");
+	//wait for 15 sec
+	LCD_clearScreen();
+	LCD_goToRowColumn(2 , 1);
+	LCD_displayString("BYE_DOOR CLOSE");
+	//wait for 15 sec
+}
+///////////////////////////////////////////////////
+static void callBackTimer(void){
+
+}
+
+static void new_pssowrd(){
+	LCD_clearScreen();
+	LCD_displayString("enter new Pass:-");
+	LCD_goToRowColumn(2 , 1);
+	for (counter=0 ; counter < N_OF_PASS ; counter ++){
+		my_pass_str[counter]= KeyPad_getPressedKey();
+		LCD_displayCharacter('*');
+		_delay_ms(250);
+	}
+	////////////////////
+	//UART_sendByte(MASTER_SEND);
+	while (UART_recieveByte() != SLAVE_READY);
+
+	PORTB=0xff;
+	UART_sendString(my_pass_str ,N_OF_PASS);
+
+
+}
+
+static void re_enter_new_pssowrd(){
+	LCD_clearScreen();
+	LCD_displayString("re_enter new Pass:-");
+	LCD_goToRowColumn(2 , 1);
+	for (counter=0 ; counter < N_OF_PASS ; counter ++){
+		my_pass_str[counter]= KeyPad_getPressedKey();
+		LCD_displayCharacter('*');
+		_delay_ms(250);
+	}
+	////////////////////
+	UART_sendString(my_pass_str ,N_OF_PASS);
+}
+
+static uint8 check_pass(){
+	return UART_recieveByte();
+}

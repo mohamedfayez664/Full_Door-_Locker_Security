@@ -1,0 +1,18 @@
+#include "external_eeprom.h"
+#include "timer.h"
+#include "uart.h"
+
+#define N_OF_PASS   5
+#define TRUE_PASS   0X0F
+#define SLAVE_READY 0x03
+#define OPEN_DOOR   0x05
+#define CHANGE_PASS 0x07
+
+
+void slave_init();
+void receive_new_pass();
+void new_pass (uint8 *str ,uint8 str_lenghth);
+uint8 compare_pass(uint8 *str ,uint8 str_lenghth);
+
+void open_door();
+void buzzer_on (void);

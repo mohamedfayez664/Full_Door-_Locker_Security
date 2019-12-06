@@ -1,0 +1,48 @@
+#include "master.h"
+
+unsigned char count =0, i=0 ;
+unsigned char letter=0 , password[5]={0};
+
+int main(void){
+
+	master_init();
+
+	enter_new_pass();
+
+	while(1){
+
+		LCD_clearScreen();
+		LCD_displayString(" *: open door ");
+		LCD_goToRowColumn(2,2);
+		LCD_displayString(" +: change pass");
+
+		letter=KeyPad_getPressedKey();
+		UART_sendByte(letter);
+
+////////////////////////
+		for (count=0 ; count < 5 ; count ++){
+			letter=KeyPad_getPressedKey();
+			password[count]=letter;
+			LCD_displayCharacter('*');
+			_delay_ms(400);
+		}
+		for(i=0;i<5;i++){
+			if(my_pass_str[i]!=password[i])
+				break;
+		}
+		if(i==5){
+			LCD_clearScreen();
+			LCD_goToRowColumn(2,1);
+			LCD_displayString("  Welcome  ");
+			_delay_ms(1000);
+		}//i
+
+		else if(i!=5){    //the password not matched
+			LCD_clearScreen();
+			LCD_goToRowColumn(2,1);
+			LCD_displayString(" Amo 7ramy ");
+			_delay_ms(1000);
+
+		}//i!=5
+	}
+}

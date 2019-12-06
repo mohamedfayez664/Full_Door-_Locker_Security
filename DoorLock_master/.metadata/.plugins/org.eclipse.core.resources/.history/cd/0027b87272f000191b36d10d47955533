@@ -1,0 +1,10 @@
+#include "keypad.h"
+#include "lcd.h"
+#include "uart.h"
+#include "timer.h"
+
+#define N_OF_PASS   5
+#define TRUE_PASS   0X0F
+
+void master_init();
+void enter_new_pass();

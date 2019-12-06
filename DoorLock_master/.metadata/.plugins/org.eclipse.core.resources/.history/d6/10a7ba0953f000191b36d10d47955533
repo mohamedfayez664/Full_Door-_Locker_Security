@@ -1,0 +1,47 @@
+#include "lcd.h"
+#include "keypad.h"
+#include "switches.h"
+
+//#include <avr/eeprom.h>
+unsigned char count =0, i=0 ;
+unsigned char letter=0;
+
+int main(void){
+
+	LCD_init();
+	switch_init();
+
+	while(1){
+
+		SREG&=~(1<<7);
+		LCD_clearScreen();
+		LCD_displayString("  Enter Password    ");
+		LCD_goToRowColumn(2,2);
+
+		for (count=0 ; count < 5 ; count ++){
+			letter=KeyPad_getPressedKey();
+			password[count]=letter;
+			LCD_displayCharacter('*');
+			_delay_ms(400);
+		}
+		for(i=0;i<5;i++){
+			if(compare[i]!=password[i])
+				break;
+		}
+		if(i==5){
+			LCD_clearScreen();
+			LCD_goToRowColumn(2,1);
+			LCD_displayString("  Welcome  ");
+			_delay_ms(1000);
+		}//i
+
+		else if(i!=5){    //the password not matched
+			LCD_clearScreen();
+			LCD_goToRowColumn(2,1);
+			LCD_displayString(" Amo 7ramy ");
+			_delay_ms(1000);
+
+		}//i!=5
+		SREG|=(1<<7);
+	}
+}

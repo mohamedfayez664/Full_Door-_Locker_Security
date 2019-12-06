@@ -1,0 +1,20 @@
+#include "slave.h"
+
+uint8 letter , letter_action;
+
+int main(void){
+
+	slave_init();
+
+	receive_new_pass ();
+
+//	uint8 val = 0;
+//	EX_EEPROM_writeByte(0x0311, 0x0F); /* Write 0x0F in the external EEPROM */
+//	_delay_ms(10);
+//	EX_EEPROM_readByte(0x0311, &val);  /* Read 0x0F from the external EEPROM */
+//	PORTD = val; /* out the read value from the external EEPROM */
+
+	while(1){
+
+	}
+}

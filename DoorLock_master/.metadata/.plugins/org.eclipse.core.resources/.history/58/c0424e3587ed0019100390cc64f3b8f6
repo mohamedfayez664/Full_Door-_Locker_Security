@@ -1,0 +1,14 @@
+
+/*
+ * eeprom.c
+ *
+ * Created: 4/22/2017 3:02:41 AM
+ *  Author: safifi
+ */ 
+
+#include "std_types.h"
+#include "std_macros.h"
+#include "std_micro_comp_conf.h"
+
+void EEPROM_write(uint8 data,uint16 addr );
+uint8  EEPROM_read(uint16 addr );

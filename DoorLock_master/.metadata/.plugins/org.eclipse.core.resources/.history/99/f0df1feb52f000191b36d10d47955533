@@ -1,0 +1,20 @@
+#ifndef INT_Init_H
+#define INT_Init_H
+
+#include "std_types.h"
+#include "std_macros.h"
+#include "std_micro_comp_conf.h"
+
+
+
+void INT0_Init(unsigned char edge);
+void INT0_CallBack(void(*a_ptr)(void));
+
+////////////////////////////////////////////////////
+void INT1_Init(unsigned char edge);
+void INT1_CallBack(void(*a_ptr)(void));
+
+////////////////////////////////////////////////////
+void INT2_Init(unsigned char edge);
+
+#endif //INT_Init_H

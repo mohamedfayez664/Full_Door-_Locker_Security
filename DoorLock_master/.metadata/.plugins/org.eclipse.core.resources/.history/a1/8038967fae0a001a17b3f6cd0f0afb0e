@@ -1,0 +1,18 @@
+#include "keypad.h"
+#include "lcd.h"
+#include "uart.h"
+#include "timer.h"
+#include "delay.h"
+
+#define N_OF_PASS   5
+#define TRUE_PASS   0X0F
+#define SLAVE_READY 0x03
+#define OPEN_DOOR   '*'
+#define CHANGE_PASS '+'
+#define FAULT_LETTER 0X07
+
+
+void master_init();
+void enter_new_pass();
+void enter_pass();
+void open_door ();

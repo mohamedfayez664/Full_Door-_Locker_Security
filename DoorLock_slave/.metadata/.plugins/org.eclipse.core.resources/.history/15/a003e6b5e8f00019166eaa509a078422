@@ -1,0 +1,89 @@
+#include "slave.h"
+
+//////static functions prototype
+static void callBackTimer(void);
+static void save_new_pass (uint8 *str ,uint8 str_lenghth);
+
+/////variables
+uint8 ROM_pass[N_OF_PASS]= {0},
+		my_pass [N_OF_PASS]= {0}, counter;
+
+/////Function definitions
+void slave_init(){
+	sei();
+	//DDRD |=0X1C;
+	PORTD&=~0X1C; //Initialization for motor and buzzer
+
+	TIMER1_CTC_A_CallBack(callBackTimer);
+	TIMER1_CTC_A_init    (2000,2);     //clock and register my_pass_str
+
+	UART_ConfigType myUartconf = {off , towStopBit};
+	UART_init(&myUartconf);
+
+	EX_EEPROM_init();   	/* Init EEPROM */
+}
+
+void recieve_pass(){
+	uint8 out_compare;
+
+	UART_receiveString (my_pass, N_OF_PASS);  //to receive check pass
+
+	out_compare=compare_pass (my_pass, N_OF_PASS);
+
+	UART_sendByte(out_compare);
+
+	if (out_compare==FALSE_PASS )
+		receive_pass();
+}
+
+uint8 compare_pass(uint8 *new_pass ,uint8 str_lenghth){
+	uint8 count;
+	for(count=0; count<str_lenghth; count++){
+		if(new_pass[count]!=ROM_pass[count])
+			break;
+	}
+	if(count==5){
+		return TRUE_PASS;
+	}
+	else if(count!=5){
+		return FALSE_PASS;
+	}
+}
+
+void receive_new_pass(){
+
+	uint8 out_compare;
+	//UART_sendByte(SLAVE_READY);
+	//while (UART_recieveByte() != MASTER_SEND);
+	UART_receiveString(ROM_pass, N_OF_PASS);
+
+	save_new_pass(ROM_pass, N_OF_PASS);  //to save it
+
+	UART_receiveString(my_pass, N_OF_PASS);  //to receive check pass
+
+	out_compare=compare_pass (my_pass, N_OF_PASS);
+
+	UART_sendByte(out_compare);
+
+	if (out_compare==FALSE_PASS )
+		receive_new_pass();
+}
+
+void open_door(){
+
+	PORTD&=~0X0C; //close again
+
+}
+
+void buzzer_on (void){
+	//run clock wise for 1 m
+}
+
+/////static functions definations
+static void save_new_pass (uint8 *str ,uint8 str_lenghth){
+	EX_EEPROM_writeData(ROM_ADD ,ROM_pass ,N_OF_PASS);
+}
+
+static void callBackTimer(void){
+	////
+}

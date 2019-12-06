@@ -1,0 +1,24 @@
+#include "internal_eeprom.h"
+
+void EEPROM_write(uint16 addr, uint8 data ){
+	/* Wait for completion of previous write */
+	while(BIT_IS_SET(EECR,EEWE));////
+	/* Set up address and data registers */
+	EEAR = addr;
+	EEDR = data;
+
+	/* Write logical one to EEMWE */
+	/* Start >> eeprom write by setting EEWE */
+	SET_2BIT(EECR,EEMWE,EEWE);
+}
+
+uint8  EEPROM_read(uint16 addr ){
+	/* Wait for completion of previous write */
+	while(BIT_IS_SET(EECR,EEWE));
+	/* Set up address register */
+	EEAR = addr;
+	/* Start eeprom read by writing EERE */
+	SET_BIT(EECR,EERE);
+	/* Return data from data register */
+	return EEDR;
+}

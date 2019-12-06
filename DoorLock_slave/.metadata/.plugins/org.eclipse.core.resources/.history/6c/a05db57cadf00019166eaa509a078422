@@ -1,0 +1,100 @@
+/******************************************************************************
+ * File Name: external_eeprom.c
+ *
+ * Description: Source file for the External EEPROM Memory
+ *
+ * Created on: 16 10 2019
+ *
+ * Author: Mohamed Fayez
+ *******************************************************************************/
+#include "i2c.h"
+#include "external_eeprom.h"
+
+void EX_EEPROM_init(void)
+{
+	/* just initialize the I2C(TWI) module inside the MC */
+	TWI_init();
+}
+
+uint8 EX_EEPROM_writeData(uint16 u16addr, uint8 *data, uint8 data_length)
+{
+	uint8 count=0;
+	/* Send the Start Bit */
+	TWI_start();
+	if (TWI_getStatus() != TW_START)
+		return ERROR;
+
+	/* Send the device address, we need to get A8 A9 A10 address bits from the
+	 * memory location address and R/W=0 (write) */
+	TWI_write((uint8)(0xA0 | ((u16addr & 0x0700)>>7)));
+	if (TWI_getStatus() != TW_MT_SLA_W_ACK)
+		return ERROR;
+
+	/* Send the required memory location address */
+	TWI_write((uint8)(u16addr));
+	if (TWI_getStatus() != TW_MT_DATA_ACK)
+		return ERROR;
+
+	/* write byte to eeprom *////////////////////
+	for (count=0; count<data_length; count++){
+		TWI_write(data[count]);//need to modify to send more single or combined data.
+		if (TWI_getStatus() != TW_MT_DATA_ACK)
+			return ERROR;
+	}
+	/* Send the Stop Bit */
+	TWI_stop();
+
+	return SUCCESS;
+}
+uint8 EX_EEPROM_write_string(uint16 u16addr, uint8 *data){
+
+	return SUCCESS;
+}
+
+uint8 EX_EEPROM_readData(uint16 u16addr, uint8 *data, uint8 data_length)
+{
+	uint8 count=0;
+	/* Send the Start Bit */
+	TWI_start();
+	if (TWI_getStatus() != TW_START)
+		return ERROR;
+
+	/* Send the device address, we need to get A8 A9 A10 address bits from the
+	 * memory location address and R/W=0 (write) */
+	TWI_write((uint8)((0xA0) | ((u16addr & 0x0700)>>7)));
+	if (TWI_getStatus() != TW_MT_SLA_W_ACK)
+		return ERROR;
+
+	/* Send the required memory location address */
+	TWI_write((uint8)(u16addr));
+	if (TWI_getStatus() != TW_MT_DATA_ACK)
+		return ERROR;
+
+	/* Send the Repeated Start Bit */
+	TWI_start();
+	if (TWI_getStatus() != TW_REP_START)
+		return ERROR;
+
+	/* Send the device address, we need to get A8 A9 A10 address bits from the
+	 * memory location address and R/W=1 (Read) */
+	TWI_write((uint8)((0xA0) | ((u16addr & 0x0700)>>7) | 1));
+	if (TWI_getStatus() != TW_MT_SLA_R_ACK)
+		return ERROR;
+
+	/* Read Byte from Memory without send ACK */
+	for(count=0;count<data_length;count++){
+		if (count < data_length-1){
+			data[count] = TWI_readWithACK();  //need to modify it too
+			if (TWI_getStatus() != TW_MR_DATA_ACK )
+				return ERROR;
+		}
+		else{
+			data[count] = TWI_readWithNACK();  //need to modify it too
+			if (TWI_getStatus() != TW_MR_DATA_NACK)
+				return ERROR;
+		}
+	}
+	/* Send the Stop Bit */
+	TWI_stop();
+	return SUCCESS;
+}
